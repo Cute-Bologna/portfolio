@@ -50,6 +50,8 @@ h1 {
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   font-size: 36px;
+  margin: 0;
+  color:  #272142;
  }
 
  .hero h2 {
@@ -60,7 +62,7 @@ h1 {
  }
 
 .about-section {
-  padding: 160px, 20px;
+  padding: 160px 20px;
 }
 
  .about-section h1 {
@@ -104,7 +106,7 @@ line-height: 80px;
 
   h1 {
     font-size: 44px;
-    line-height: 2;
+    line-height: 56px;
   }
 
   h2 {
