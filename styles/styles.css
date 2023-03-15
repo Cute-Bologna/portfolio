@@ -44,9 +44,10 @@ p {
 }
 
 .hero {
-  background: var(--secondary-color);
+  background-color: var(--secondary-color);
   text-align: center;
   padding: 160px 20px;
+ 
 }
 
 .hero p {
@@ -117,6 +118,7 @@ p {
 
 footer {
   margin: 60px 0;
+  
 }
 
 footer .contact-box {
