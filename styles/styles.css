@@ -43,6 +43,16 @@ p {
   line-height: 30px;
 }
 
+.highlight:hover {
+  border-radius: 1em 0 1em 0;
+  background-image: linear-gradient(
+    -100deg,
+    rgba(255, 224, 0, 0.2),
+    rgba(253, 247, 171, 0.7) 95%,
+    rgba(255, 224, 0, 0.1)
+  );
+}
+
 .hero {
   background-image: url("../images/arhero.png");
   background-size: cover;
@@ -61,7 +71,7 @@ p {
 }
 
 .hero h2 {
-  display:inline-block;
+  display: inline-block;
   letter-spacing: 5px;
   font-family: var(--default-font-family);
   font-weight: normal;
@@ -70,26 +80,29 @@ p {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
-  animation: 
-  typing 6s steps(27),
-  cursor .3s step-end infinite alternate;
+  animation: typing 6s steps(27), cursor 0.3s step-end infinite alternate;
 }
 
 @keyframes cursor {
-  50% { border-color: transparent }
+  50% {
+    border-color: transparent;
+  }
 }
 
 @keyframes typing {
-  from { width: 0 }
+  from {
+    width: 0;
+  }
 }
 
 .container video {
   width: 98%;
   border-radius: 25px;
   box-shadow: 8px 8px 3px grey;
+  position: relative;
+  top: 66px;
+  left: 42px;
 }
-
-
 
 .content-container {
   padding: 160px 20px;
@@ -140,18 +153,20 @@ p {
 
 .project-description {
   padding: 120px 60px;
+  position: relative;
+  left: 80px;
+  bottom: 69px;
 }
 
 footer {
   margin: 60px 0;
-
 }
 
 footer .contact-box {
   background-color: var(--secondary-color);
   padding: 30px 160px;
   border-radius: 7px;
-    background-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
