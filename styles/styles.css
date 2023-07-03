@@ -43,15 +43,7 @@ p {
   line-height: 30px;
 }
 
-.highlight:hover {
-  border-radius: 1em 0 1em 0;
-  background-image: linear-gradient(
-    -100deg,
-    rgba(255, 224, 0, 0.2),
-    rgba(253, 247, 171, 0.7) 95%,
-    rgba(255, 224, 0, 0.1)
-  );
-}
+
 
 .hero {
   background-image: url("../images/rainbowskiensblubg.png");
@@ -95,14 +87,6 @@ p {
   }
 }
 
-.container video {
-  width: 98%;
-  border-radius: 25px;
-  box-shadow: 8px 8px 3px grey;
-  position: relative;
-  top: 66px;
-  left: 42px;
-}
 
 .content-container {
   padding: 160px 20px;
@@ -131,7 +115,18 @@ p {
 
 .content {
   margin: 30px;
+ 
 }
+
+.container video {
+  width: 98%;
+  border-radius: 25px;
+  box-shadow: 8px 8px 3px grey;
+  position: relative;
+  top: 66px;
+  left: 42px;
+}
+
 
 .btn-branding {
   background: var(--branding-color);
