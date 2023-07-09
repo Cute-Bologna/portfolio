@@ -7,6 +7,7 @@
 
 body {
   font-family: var(--default-font-family);
+  background: #EBE0DA;
 }
 
 h1,
@@ -46,10 +47,10 @@ p {
 
 
 .hero {
-  background-image: url("../images/rainbowskiensblubg.png");
+  background-image: url("../images/2.png");
   background-size: cover;
   text-align: center;
-  padding: 200px 20px;
+  padding: 100px 20px;
   background-repeat: no-repeat;
   width: 100%;
 }
