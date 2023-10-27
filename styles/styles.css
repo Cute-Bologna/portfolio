@@ -44,7 +44,11 @@ p {
   line-height: 30px;
 }
 
+.navbar { 
+  background-color: #EBE0DA;
+  background-image: ;
 
+}
 
 .hero {
   background-image: url("../images/girlwithrabbits.jpg");
