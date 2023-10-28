@@ -81,6 +81,25 @@ p {
   animation: typing 6s steps(27), cursor 0.3s step-end infinite alternate;
 }
 
+.about-section {
+  padding: 160px 20px;
+  text-align: center;
+}
+
+.about-section h1 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+.about-section h2 {
+  font-size: 18px;
+  font-family:(--default-font-family);
+}
+
+.about-section-contect {
+  margin: 30px;
+}
+
 @keyframes cursor {
   50% {
     border-color: transparent;
