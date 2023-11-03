@@ -81,6 +81,7 @@ p {
   animation: typing 6s steps(27), cursor 0.3s step-end infinite alternate;
 }
 
+
 .content {
   padding: 160px 20px;
   text-align: center;
