@@ -1,6 +1,6 @@
 :root {
-  --branding-color: #ffbcb9;
-  --secondary-color: #fdf7ab;
+  --branding-color: #d99782 ;
+  --secondary-color: #b17a1e;
   --heading-font-family: "Playfair Display", serif;
   --default-font-family: "Poppins", sans-serif;
 }
@@ -8,6 +8,7 @@
 body {
   font-family: var(--default-font-family);
   background: white;
+  
 }
 
 h1,
@@ -31,6 +32,10 @@ h1 {
 
 h2 {
   font-size: 64px;
+}
+
+h3 {
+  font-style: oblique 40deg;
 }
 
 h4 {
@@ -158,16 +163,6 @@ p {
  
 }
 
-.container video {
-  width: 98%;
-  border-radius: 25px;
-  box-shadow: 8px 8px 3px grey;
-  position: relative;
-  top: 66px;
-  left: 42px;
-}
-
-
 .btn-branding {
   background: var(--branding-color);
   border-radius: 4px;
@@ -198,6 +193,9 @@ p {
   padding-top: 100px;
   
 }
+
+
+
 
 footer {
   margin: 60px 0;
