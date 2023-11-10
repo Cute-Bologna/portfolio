@@ -1,4 +1,4 @@
-#info_cards * {
+ * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -6,7 +6,7 @@
   --secondary-color: #fdf7ab;
 }
 
-#info_cards body {
+ body {
   height: 100vh;
   overflow: hidden;
   background: linear-gradient(45deg, --branding-color, --secondary-color);
@@ -15,12 +15,12 @@
   align-items: center;
 }
 
-#info_cards .container {
+.cardcontainer {
   width: 350px;
   height: 500px;
 }
 
-#info_cards .card {
+.card {
   height: 100%;
   width: 100%;
   position: relative;
@@ -28,13 +28,13 @@
   transform-style: preserve-3d;
 }
 
-#info_cards .container:hover > .card {
+.cardcontainer:hover > .card {
     cursor: pointer;
     transform: rotateY(180deg);
     perspective: 500px;
 }
 
-#info_cards .front,
+.front,
 .back {
     height: 100%;
     width: 100%;
@@ -45,11 +45,11 @@
 
 }
 
- #info_cards .front {
+ .front {
     background-image: url(/images/abra.png);
 }
 
-#info_cards .back {
+.back {
     background-color: (--secondary-color);
     transform: rotateY(180deg);
     display: flex;
