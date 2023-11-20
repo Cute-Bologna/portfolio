@@ -1,12 +1,12 @@
 :root {
-  --branding-color: #d99782 ;
+  --branding-color: #d99782;
   --secondary-color: #b17a1e;
   --heading-font-family: "Playfair Display", serif;
   --default-font-family: "Poppins", sans-serif;
 }
 
 * {
-   margin: 0;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -14,7 +14,8 @@
 body {
   font-family: var(--default-font-family);
   background: white;
-  
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -32,7 +33,7 @@ h1 {
   color: black;
   font-family: "Playfair Display", serif;
   font-weight: bold;
-  font-size: 96px;
+  font-size: 90px;
   line-height: 1.5;
 }
 
@@ -55,11 +56,8 @@ p {
   line-height: 30px;
 }
 
-.navbar { 
-  background-color: #EBE0DA;
-  
-
-
+.navbar {
+  background-color: #ebe0da;
 }
 
 .hero {
@@ -79,6 +77,11 @@ p {
   color: #272142;
 }
 
+.hero h1 {
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
 .hero h2 {
   display: inline-block;
   letter-spacing: 5px;
@@ -92,45 +95,15 @@ p {
   animation: typing 6s steps(27), cursor 0.3s step-end infinite alternate;
 }
 
-
 .content {
   padding: 160px 20px;
   text-align: center;
-  animation: 20s slider infinite;
-}
-
-#gallery body{
-  margin: 0;
-  padding: 0;
-  background: #313131;
-}
-
-.slider{
-  width: 444px;
-  height: 333px;
-  background: url(/images/amazon.png);
-  margin: 100px auto;
-  animation: slide ease-out 20s infinite;
-}
-
-@keyframes slide{
-  25%{
-    background: url(/images/audible.png);
-  }
-  50%{
-    background: url(/images/walmart.png);
-  }
-  75%{
-    background: url(/images/8billiontrees.png);
-  }
-  100%{
-    background: url(/images/amazon.png);
-  }
 }
 
 .content h1 {
   font-size: 64px;
   line-height: 80px;
+  max-width: 20ch;
 }
 
 .content h2 {
@@ -146,7 +119,6 @@ p {
 }
 
 .content p {
-  
   font-size: 14px;
 }
 
@@ -165,7 +137,6 @@ p {
     width: 0;
   }
 }
-
 
 .content-container {
   padding: 160px 20px;
@@ -196,7 +167,6 @@ p {
   margin: 30px;
   text-align: center;
   padding: 0;
- 
 }
 
 .btn-branding {
@@ -206,6 +176,11 @@ p {
   font-size: 18px;
   line-height: 27px;
   padding: 15px 30px;
+  transition: transform 0.3s;
+}
+
+.btn-branding:hover {
+  transform: translateY(-10px);
 }
 
 .btn-branding-outline {
@@ -215,6 +190,11 @@ p {
   font-size: 18px;
   line-height: 27px;
   padding: 15px 30px;
+  transition: transform 0.3s;
+}
+
+.btn-branding-outline:hover {
+  transform: translateY(-10px);
 }
 
 .project-description {
@@ -227,55 +207,105 @@ p {
   margin: 0 auto;
   margin-top: 15px;
   padding-top: 100px;
-  
 }
 
-.cardcontainer {
-  width: 555px;
-  height: 400px;
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
-.card {
-  height: 100%;
-  width: 100%;
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background: white;
+  white-space: nowrap;
   position: relative;
-  transition: transform 1500ms;
-  transform-style: preserve-3d;
 }
 
-.cardcontainer:hover > .card {
-    cursor: pointer;
-    transform: rotateY(180deg);
-    perspective: 500px;
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
 }
 
-.front,
-.back {
-    height: 100%;
-    width: 100%;
-    border-radius: 2rem;
-    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
-    position: absolute;
-    backface-visibility: hidden;
-
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
 }
 
- .front {
-    background-image: url(/images/abra.png);
-   
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
 }
 
-.back {
-    background-color: (--secondary-color);
-    transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-
+.logos:hover .logos-slide {
+  animation-play-state: paused;
 }
 
+.logos-slide {
+  display: inline-block;
+  animation: 30s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 50px;
+  margin: 0 40px;
+}
+
+.card-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.card{
+  width: 325px;
+  background-color: #fff;
+  border-radius:  8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+}
+
+.card img{
+  width: 100%;
+  height: auto;
+}
+
+.card-content{
+  padding: 16px;
+}
+
+.card-content h3{
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.card-content p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.card-content .btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: var(--branding-color);
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 16px;
+  color: #fff;
+
+}
 
 footer {
   margin: 60px 0;
