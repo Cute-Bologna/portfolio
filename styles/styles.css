@@ -1,6 +1,6 @@
 :root {
   --branding-color: #d99782;
-  --secondary-color: #b17a1e;
+  --secondary-color: khaki;
   --heading-font-family: "Playfair Display", serif;
   --default-font-family: "Poppins", sans-serif;
 }
@@ -202,6 +202,7 @@ p {
   position: relative;
   left: 80px;
   bottom: 69px;
+  
 }
 .brand-description {
   margin: 0 auto;
@@ -220,7 +221,7 @@ p {
 
 .logos {
   overflow: hidden;
-  padding: 60px 0;
+  padding: 100px 0;
   background: white;
   white-space: nowrap;
   position: relative;
@@ -256,42 +257,118 @@ p {
 }
 
 .logos-slide img {
-  height: 50px;
+  height: 60px;
   margin: 0 40px;
 }
 
-.card-container{
+
+.work-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(to right, pink, khaki);
+}
+
+.left-text{
+  flex-basis: 30%;
+  
+}
+
+.work-gallery{
+  flex-basis: 50%;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 120px;
+  padding: 20px;
+}
+
+.box{
+  background-size: cover;
+  background-position: top;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+  background-blend-mode: hard-light;
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.box:hover{
+  background-color: #999;
+  background-position: center;
+  box-shadow: 0 0 4px #fff;
+}
+
+#box-1,
+#box-3,
+#box-4{
+  grid-row: span 2;
+}
+
+#box-2,
+#box-6{
+  grid-column: span 2;
+}
+
+#box-8 {
+  grid-column: span 3;
+}
+
+
+.heading{
+  color: #fff;
+font-size: 3rem;
+text-align: center;
+
+}
+
+.subheading{
+  color: #222;
+margin-top: 10px;
+text-align: center;
+}
+
+
+.card-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 100px;
+  margin-top: 80px;
+
 }
 
-.card{
-  width: 325px;
+.card {
+  width: 400px;
   background-color: #fff;
-  border-radius:  8px;
+  border-radius: 8px;
   overflow: hidden;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   margin: 20px;
+  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
 }
 
-.card img{
+.card img {
   width: 100%;
   height: auto;
 }
 
-.card-content{
+.card-content {
   padding: 16px;
 }
 
-.card-content h3{
+.card-content h3 {
   font-size: 28px;
   margin-bottom: 8px;
 }
 
 .card-content p {
-  color: #666;
   font-size: 15px;
   line-height: 1.3;
 }
@@ -304,7 +381,164 @@ p {
   border-radius: 4px;
   margin-top: 16px;
   color: #fff;
+  position: center;
+}
 
+.card-content .btn:hover {
+  transform: translateY(-10px);
+}
+
+.contact {
+  width: 100%;
+  overflow: hidden;
+}
+
+.contact .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 100px;
+}
+
+.content-container:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  filter: blur(50px);
+  z-index: -1;
+}
+
+.contact .container > div {
+  max-width: 850px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+}
+
+.left {
+  padding: 85px 800px;
+  background: url("/images/arcontact.png") no-repeat center;
+  border-radius: 20px;
+}
+
+.contact-heading h3 {
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 0.9;
+  white-space: nowrap;
+  margin-bottom: 1.2rem;
+}
+
+.contact-heading h3 span {
+  color: #d99782;
+}
+
+.form-wrapper {
+  max-width: 32rem;
+}
+
+.contact-form {
+  display: grid;
+  margin-top: 2.55rem;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  row-gap: 1rem;
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.input-wrap.w-100 {
+  grid-column: span 2;
+}
+
+textarea.contact-input {
+  resize: none;
+  width: 100%;
+  min-height: 150px;
+}
+
+textarea.contact-input ~ label {
+  top: 1.2rem;
+  transform: none;
+}
+
+textarea.contact-input ~ .icon {
+  top: 1.3rem;
+  transform: none;
+}
+
+.input-wrap.focus .contact-input {
+  background-color: aqua;
+  border: 2px solid lightseagreen;
+}
+
+.contact-input {
+  width: 100%;
+  background-color: pink;
+  padding: 1.5rem 1.35rem calc(0.75rem -2px) 1.35rem;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 0px;
+  transition: 0.3s;
+}
+
+.contact-input:hover {
+  background-color: aquamarine;
+}
+
+.field {
+  width: 100%;
+  border: 2px solid rgba(0, 0, 0, 0);
+  outline: none;
+  background-color: rgba(230, 230, 230, 0.6);
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 22px;
+  transition: 0.3s;
+}
+
+.field:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  min-height: 150px;
+}
+
+input.button {
+  display: inline-block;
+  padding: 1.1rem 2rem;
+  background-color: #d99782;
+  border-radius: 20px;
+  border: none;
+}
+
+input.button:hover {
+  background-color: aquamarine;
+  cursor: pointer;
+}
+
+.right {
+  background: url("/images/arcontact.png") no-repeat center;
+  background-size: cover;
+  height: 100%;
 }
 
 footer {
@@ -369,7 +603,32 @@ footer .social-links a:hover {
   }
 
   .project-description {
-    padding: 0;
+    padding: 20px;
     text-align: center;
+    position:inherit;
+    margin-bottom: 20px;
+  
+  }
+
+  .work-container {
+    flex-direction: column;
+    padding-block: 20px;
+  }
+
+  .work-gallery {
+    width: 100%;
+    padding-inline: 12px;
+  }
+
+  #box-1,
+  #box-2,
+  #box-3,
+  #box-4,
+  #box-5,
+  #box-6,
+  #box-7,
+  #box-8 {
+    grid-row: span 1;
+    grid-column: span 3;
   }
 }
