@@ -268,11 +268,14 @@ p {
   justify-content: space-evenly;
   align-items: center;
   gap: 20px;
-  background: linear-gradient(to right, pink, khaki);
+  
 }
 
 .left-text{
-  flex-basis: 30%;
+  background: linear-gradient(to right, pink, khaki);
+  
+ 
+ 
   
 }
 
@@ -322,7 +325,7 @@ p {
 
 
 .heading{
-  color: #fff;
+  color: #000;
 font-size: 3rem;
 text-align: center;
 
@@ -618,6 +621,7 @@ footer .social-links a:hover {
   .work-gallery {
     width: 100%;
     padding-inline: 12px;
+    grid-auto-rows: 120px;
   }
 
   #box-1,
