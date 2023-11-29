@@ -271,14 +271,6 @@ p {
   
 }
 
-.left-text{
-  background: linear-gradient(to right, pink, khaki);
-  
- 
- 
-  
-}
-
 .work-gallery{
   flex-basis: 50%;
   display: grid;
@@ -319,9 +311,6 @@ p {
   grid-column: span 2;
 }
 
-#box-8 {
-  grid-column: span 3;
-}
 
 
 .heading{
