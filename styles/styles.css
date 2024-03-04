@@ -60,8 +60,8 @@ p {
   background-color: #ebe0da;
 }
 
-.hero {
-  background-image: url("../images/girlwithrabbits.jpg");
+.header {
+  background-image: url("../imag es/girlwithrabbits.jpg");
   background-size: cover;
   text-align: center;
   padding: 100px 20px;
@@ -69,7 +69,7 @@ p {
   width: 100%;
 }
 
-.hero p {
+.header p {
   font-family: "Poppins", sans-serif;
   font-weight: bold;
   font-size: 36px;
@@ -77,22 +77,9 @@ p {
   color: #272142;
 }
 
-.hero h1 {
+.header h1 {
   letter-spacing: 1px;
   line-height: 1.5;
-}
-
-.hero h2 {
-  display: inline-block;
-  letter-spacing: 5px;
-  font-family: var(--default-font-family);
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 1.5;
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 6s steps(27), cursor 0.3s step-end infinite alternate;
 }
 
 .content {
@@ -202,7 +189,6 @@ p {
   position: relative;
   left: 80px;
   bottom: 69px;
-  
 }
 .brand-description {
   margin: 0 auto;
@@ -261,17 +247,15 @@ p {
   margin: 0 40px;
 }
 
-
 .work-container {
   min-height: 100vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   gap: 20px;
-  
 }
 
-.work-gallery{
+.work-gallery {
   flex-basis: 50%;
   display: grid;
   gap: 8px;
@@ -280,7 +264,7 @@ p {
   padding: 20px;
 }
 
-.box{
+.box {
   background-size: cover;
   background-position: top;
   color: #fff;
@@ -294,7 +278,7 @@ p {
   border-radius: 8px;
 }
 
-.box:hover{
+.box:hover {
   background-color: #999;
   background-position: center;
   box-shadow: 0 0 4px #fff;
@@ -302,37 +286,32 @@ p {
 
 #box-1,
 #box-3,
-#box-4{
+#box-4 {
   grid-row: span 2;
 }
 
 #box-2,
-#box-6{
+#box-6 {
   grid-column: span 2;
 }
 
-
-
-.heading{
+.heading {
   color: #000;
-font-size: 3rem;
-text-align: center;
-
+  font-size: 3rem;
+  text-align: center;
 }
 
-.subheading{
+.subheading {
   color: #222;
-margin-top: 10px;
-text-align: center;
+  margin-top: 10px;
+  text-align: center;
 }
-
 
 .card-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 80px;
-
 }
 
 .card {
@@ -597,9 +576,8 @@ footer .social-links a:hover {
   .project-description {
     padding: 20px;
     text-align: center;
-    position:inherit;
+    position: inherit;
     margin-bottom: 20px;
-  
   }
 
   .work-container {
